@@ -1,0 +1,11 @@
+.task__list-wrap {
+    display: flex;
+    flex-direction: column;
+    margin-top: 78px;
+}
+
+.task__list-topbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}

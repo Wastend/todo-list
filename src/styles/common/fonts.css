@@ -1,0 +1,53 @@
+@font-face {
+    font-family: Muller;
+    src: url("../../assets/fonts/Muller/Muller-Trial-Regular.ttf") format("ttf"),
+        url("../../assets/fonts/Muller/Muller-Trial-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Muller;
+    src: url("../../assets/fonts/Muller/Muller-Trial-RegularItalic.ttf") format("ttf"),
+        url("../../assets/fonts/Muller/Muller-Trial-RegularItalic.ttf") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Muller;
+    src: url("../../assets/fonts/Muller/Muller-Trial-Medium.ttf") format("ttf"),
+        url("../../assets/fonts/Muller/Muller-Trial-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Muller;
+    src: url("../../assets/fonts/Muller/Muller-Trial-MediumItalic.ttf") format("ttf"),
+        url("../../assets/fonts/Muller/Muller-Trial-MediumItalic.ttf") format("woff2");
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Muller;
+    src: url("../../assets/fonts/Muller/Muller-Trial-Bold.ttf") format("ttf"),
+        url("../../assets/fonts/Muller/Muller-Trial-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Muller;
+    src: url("../../assets/fonts/Muller/Muller-Trial-BoldItalic.ttf") format("ttf"),
+        url("../../assets/fonts/Muller/Muller-Trial-BoldItalic.ttf") format("woff2");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
