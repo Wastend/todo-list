@@ -1,11 +1,223 @@
 .task__list-wrap {
     display: flex;
     flex-direction: column;
-    margin-top: 78px;
+    width: 100%;
+    margin-top: 69px;
 }
 
 .task__list-topbar {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.btn,
+.btn1,
+.btn2 {
+    padding: 9px 15px 11px 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 1;
+    height: 36px;
+    border: 2px solid var(--color-black);
+    transition: .4s;
+    background-color: transparent;
+}
+
+.btn {
+    border-color: var(--color-black);
+    color: var(--color-black);
+}
+
+.btn.active,
+.btn:active {
+    background-color: var(--color-black);
+}
+
+.btn:hover {
+    background-color: var(--color-gray-3);
+}
+
+.btn:focus {
+    background-color: var(--color-black);
+    border-color: var(--color-gray-1);
+}
+
+.btn1 {
+    border-color: var(--color-green);
+    color: var(--color-green);
+}
+
+.btn1.active,
+.btn1:active {
+    background-color: var(--color-green);
+}
+
+.btn1:hover {
+    background-color: var(--color-green-light);
+}
+
+.btn1:focus {
+    background-color: var(--color-green);
+    border-color: var(--color-green-light);
+}
+
+.btn2 {
+    border-color: var(--color-red);
+    color: var(--color-red);
+}
+
+.btn2.active,
+.btn2:active {
+    background-color: var(--color-red);
+}
+
+.btn2:hover {
+    background-color: var(--color-red-light);
+}
+
+.btn2:focus {
+    background-color: var(--color-red);
+    border-color: var(--color-red-light);
+}
+
+.btn.active,
+.btn:active,
+.btn1.active,
+.btn1:active,
+.btn2.active,
+.btn2:active,
+.btn:hover,
+.btn:focus,
+.btn1:focus,
+.btn2:focus {
+    color: var(--color-white);
+}
+
+.btn:disabled,
+.btn1:disabled,
+.btn2:disabled {
+    background-color: var(--color-disabled-2);
+    border-color: var(--color-disabled-2);
+    color: var(--color-disabled-1);
+}
+
+.task__list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 21px;
+    margin-top: 33px;
+}
+
+.task__list li {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 20px 20px 18px;
+    gap: 5px;
+    box-shadow: 0px 4px 17.8px 0px #0000001A;
+}
+
+.task__list li p {
+    margin-top: 16px;
+    padding-left: 50px;
+    padding-right: 70px;
+    position: relative;
+}
+
+.task__list li p::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -3px;
+    left: 0;;
+    width: 20px;
+    height: 20px;
+    border: 2px solid;
+    border-radius: 100%;
+    background-color: var(--color-white);
+    border-color: var(--color-gray-1);
+}
+
+.task__list li p.task-completed {
+    text-decoration: line-through;
+}
+
+.task__list li p.task-completed::before {
+    background-color: var(--color-green);
+    border-color: var(--color-green);
+}
+
+.task__tools {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -2px;
+    gap: 14px;
+    margin-right: 11px;
+}
+
+.task__tools button {
+    border: 0;
+    background-color: transparent;
+}
+
+@media(max-width: 768px) {
+    .task__list-wrap {
+        margin-top: 30px;
+    }
+
+    .task__list-topbar {
+        flex-wrap: nowrap;
+        overflow: overlay;
+        width: calc(100% + 16px);
+        gap: 12px;
+    }
+
+    .task__list-topbar::-webkit-scrollbar {
+        display: none;
+       }
+
+    .btn, .btn1, .btn2 {
+        height: 31px;
+        padding: 7px 14px 13px 15px;
+        white-space: nowrap;
+        font-size: 14px;
+        border-radius: 12px;
+    }
+
+    .task__list {
+        margin-top: 20px;
+        gap: 15px;
+    }
+
+    .task__list li {
+        padding-bottom: 16px;
+    }
+
+    .task__list li p {
+        margin-top: 15px;
+        font-size: 14px;
+        padding-right: 28px;
+    }
+
+    .task__list li p::before {
+        width: 17px;
+        height: 17px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    .task__tools {
+        margin-top: 4px;
+        margin-right: 2px;
+        gap: 22px;
+    }
+
+    .task__tools-remove svg,
+    .task__tools-edit svg {
+        width: 17px;
+    }
 }

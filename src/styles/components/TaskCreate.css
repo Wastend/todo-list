@@ -44,3 +44,28 @@
 .task__form button::after {
     transform: rotate(90deg);
 }
+
+@media(max-width: 768px) {
+    .task__form {
+        margin-top: 17px;
+    }
+
+    .task__form input {
+        height: 52px;
+        border-radius: 10px;
+        font-size: 14px;
+        padding-left: 10px;
+        padding-right: 60px;
+    }
+
+    .task__form button {
+        width: 39px;
+        height: 34px;
+        border-radius: 8px;
+        right: 10px;
+    }
+
+    .task__form button::before, .task__form button::after {
+        width: 20px;
+    }
+}
