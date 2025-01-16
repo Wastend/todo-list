@@ -109,30 +109,21 @@
     width: 100%;
     gap: 21px;
     margin-top: 33px;
+    margin-bottom: 40px;
 }
 
 .task__list li {
     display: flex;
     flex-direction: column;
     border-radius: 20px;
-    padding: 20px 20px 18px;
+    padding: 20px 20px 16px;
     gap: 5px;
     box-shadow: 0px 4px 17.8px 0px #0000001A;
 }
 
-.task__list li p {
-    margin-top: 16px;
-    padding-left: 50px;
-    padding-right: 70px;
-    position: relative;
-}
-
-.task__list li p::before {
-    content: '';
+.task__list li .task-status {
+    cursor: pointer;
     display: block;
-    position: absolute;
-    top: -3px;
-    left: 0;;
     width: 20px;
     height: 20px;
     border: 2px solid;
@@ -141,13 +132,31 @@
     border-color: var(--color-gray-1);
 }
 
-.task__list li p.task-completed {
+.task__list li.completed .task-status {
+    background-color: var(--color-green);
+    border-color: var(--color-green);
+}
+
+.task__list li .task-info p {
+    padding-left: 30px;
+    padding-right: 70px;
+    position: relative;
+}
+
+.task__list li.completed .task-info p {
     text-decoration: line-through;
 }
 
-.task__list li p.task-completed::before {
-    background-color: var(--color-green);
-    border-color: var(--color-green);
+.task-info {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 14px;
+}
+
+.task-info input {
+    margin-left: 30px;
+    width: 45%;
 }
 
 .task__tools {
@@ -161,6 +170,27 @@
 .task__tools button {
     border: 0;
     background-color: transparent;
+}
+
+.task__tools-edit {
+    display: flex;
+    align-items: center;
+    margin-top: -3px;
+    gap: 10px;
+}
+
+.task__tools-edit p {
+    display: none;
+}
+
+.task__tools-edit.active p {
+    display: contents;
+    margin-top: 1px;
+    color: var(--color-blue);
+}
+
+.task__tools-edit.active path{
+    stroke: var(--color-blue);
 }
 
 @media(max-width: 768px) {
@@ -177,9 +207,11 @@
 
     .task__list-topbar::-webkit-scrollbar {
         display: none;
-       }
+    }
 
-    .btn, .btn1, .btn2 {
+    .btn,
+    .btn1,
+    .btn2 {
         height: 31px;
         padding: 7px 14px 13px 15px;
         white-space: nowrap;
@@ -196,8 +228,11 @@
         padding-bottom: 16px;
     }
 
-    .task__list li p {
+    .task-info {
         margin-top: 15px;
+    }
+
+    .task__list li p {
         font-size: 14px;
         padding-right: 28px;
     }
@@ -219,5 +254,9 @@
     .task__tools-remove svg,
     .task__tools-edit svg {
         width: 17px;
+    }
+
+    .task-info input {
+        width: 85%;
     }
 }

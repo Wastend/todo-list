@@ -10,7 +10,7 @@
     border: 0;
     box-shadow: 0px 4px 17.8px 0px #0000001A;
     height: 90px;
-    font-size: 24px;
+    font-size: 24px !important;
     padding: 0 100px 0 21px;
     border-radius: 21px;
 }
@@ -25,6 +25,7 @@
     top: 0;
     bottom: 0;
     margin: auto;
+    transition: .6s;
 }
 
 .task__form button::before,
@@ -53,7 +54,7 @@
     .task__form input {
         height: 52px;
         border-radius: 10px;
-        font-size: 14px;
+        font-size: 14px !important;
         padding-left: 10px;
         padding-right: 60px;
     }
@@ -65,7 +66,19 @@
         right: 10px;
     }
 
-    .task__form button::before, .task__form button::after {
+    .task__form button::before,
+    .task__form button::after {
         width: 20px;
+    }
+}
+
+@media(Hover:hover) {
+    .task__form button:hover {
+        background-color: var(--color-black);
+    }
+
+    .task__form button:hover::before,
+    .task__form button:hover::after {
+        background-color: var(--color-white);
     }
 }
